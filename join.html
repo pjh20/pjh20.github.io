@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가입창</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "나눔고딕","Nanum Gothic","sans-serif";
+            font-size: 16px;
+            color: #333;
+            background-color: purple;
+
+            /* 🔥 전체 여백 추가 */
+            padding: 40px 0;
+        }
+
+        #join_wrap {
+            width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px; /* 🔥 내부 여백 */
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px; /* 🔥 아래 공간 */
+        }
+
+        fieldset {
+            border: 0;
+            margin-bottom: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        caption {
+            position: absolute;
+            left: 9999em;
+        }
+
+        .joinTable th, .joinTable td {
+            padding: 15px; /* 🔥 기존보다 크게 */
+            border-bottom: 1px solid #ddd;
+        }
+
+        .joinTable th {
+            width: 180px;
+            text-align: left;
+            background-color: #f5f5f5;
+        }
+
+        .joinTable .textForm {
+            width: 90%;
+            height: 42px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 0 10px;
+        }
+
+        textarea.textForm {
+            height: 80px;
+            padding: 10px;
+        }
+
+        .btn_area {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn_area button {
+            width: 200px;
+            height: 60px;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+
+        .btn_join {
+            background-color: #091d53;
+            color: #fff;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="join_wrap">
+
+        <h1>회원가입</h1>
+
+        <form>
+
+            <fieldset>
+                <legend>필수입력정보</legend>
+
+                <table class="joinTable">
+
+                    <tr>
+                        <th>아이디</th>
+                        <td>
+                            <input type="text" class="textForm">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>비밀번호</th>
+                        <td>
+                            <input type="password" class="textForm">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>이름</th>
+                        <td>
+                            <input type="text" class="textForm">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>이메일</th>
+                        <td>
+                            <input type="email" class="textForm">
+                        </td>
+                    </tr>
+
+                </table>
+            </fieldset>
+
+            <fieldset>
+                <legend>선택입력정보</legend>
+
+                <table class="joinTable">
+
+                    <tr>
+                        <th>생년월일</th>
+                        <td><input type="date" class="textForm"></td>
+                    </tr>
+
+                    <tr>
+                        <th>성별</th>
+                        <td>
+                            <input type="radio" name="gender"> 남
+                            <input type="radio" name="gender"> 여
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>자기소개</th>
+                        <td>
+                            <textarea class="textForm"></textarea>
+                        </td>
+                    </tr>
+
+                </table>
+            </fieldset>
+
+            <div class="btn_area">
+                <button type="reset">취소</button>
+                <button type="submit" class="btn_join">회원가입</button>
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
