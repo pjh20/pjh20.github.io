@@ -1,0 +1,207 @@
+```html id="final_form_link"
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>건영크리너</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Pretendard',sans-serif;}
+a{text-decoration:none;color:inherit}
+
+/* 헤더 */
+header{
+position:fixed;width:100%;top:0;
+display:flex;justify-content:space-between;
+padding:15px 40px;
+background:#000;color:#fff;
+z-index:1000;
+}
+nav a{margin-left:25px;cursor:pointer;}
+
+/* 히어로 */
+.hero{
+height:50vh;
+background:url('./images/hero.jpg') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#fff;
+position:relative;
+}
+.hero::before{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.4);
+}
+.hero div{
+position:relative;
+z-index:2;
+text-align:center;
+}
+.hero h1{font-size:36px;}
+.hero p{margin-top:10px;}
+.hero button{
+margin-top:20px;
+padding:12px 30px;
+border:none;
+background:#fff;
+cursor:pointer;
+font-weight:bold;
+}
+
+/* 섹션 */
+section{padding:80px 40px;}
+.title{font-size:28px;margin-bottom:20px;}
+.desc{margin-bottom:30px;color:#666;}
+
+/* 카드 */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+.card{
+background:#fff;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+.card:hover{transform:translateY(-8px);}
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+.card h3{padding:15px;}
+.card p{padding:0 15px 20px;color:#777;}
+
+/* 문의 버튼 */
+.contact-box{
+text-align:center;
+}
+.contact-box button{
+padding:18px 40px;
+font-size:18px;
+background:#111;
+color:#fff;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+/* 지도 */
+.map-box{
+max-width:1000px;
+margin:auto;
+border-radius:15px;
+overflow:hidden;
+}
+
+/* 카카오 */
+.kakao{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#FEE500;
+padding:15px;
+border-radius:50px;
+font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>KY CLEANER</h1>
+<nav>
+<a onclick="move('product')">제품</a>
+<a onclick="move('contact')">문의</a>
+<a onclick="move('map')">오시는길</a>
+</nav>
+</header>
+
+<!-- 히어로 -->
+<section class="hero">
+<div>
+<h1>기업 맞춤 초극세사 솔루션</h1>
+<p>프리미엄 클리너 제작 전문</p>
+<button onclick="goForm()">견적 문의</button>
+</div>
+</section>
+
+<!-- 제품 -->
+<section id="product">
+<h2 class="title">대표 제품</h2>
+<p class="desc">기업 판촉 및 맞춤 제작 제품</p>
+
+<div class="grid">
+
+<div class="card">
+<img src="./images/kyimage.jpg">
+<h3>안경 클리너</h3>
+<p>고급 초극세사 소재</p>
+</div>
+
+<div class="card">
+<img src="./images/kyimage2.jpg">
+<h3>기업 굿즈</h3>
+<p>로고 인쇄 및 맞춤 제작</p>
+</div>
+
+<div class="card">
+<img src="./images/kyimage3.jpg">
+<h3>패키지 세트</h3>
+<p>선물용 및 판촉 패키지</p>
+</div>
+
+</div>
+</section>
+
+<!-- 🔥 상담 -->
+<section id="contact">
+<h2 class="title">상담 문의</h2>
+
+<div class="contact-box">
+<p class="desc">아래 버튼을 눌러 상담 신청서를 작성해주세요</p>
+
+<button onclick="goForm()">
+상담 신청하기
+</button>
+
+</div>
+</section>
+
+<!-- 지도 -->
+<section id="map">
+<h2 class="title">찾아오시는 길</h2>
+
+<div class="map-box">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1615.4631323817314!2d128.59236726626133!3d35.92430481436255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3565e0e6cc26048f%3A0xb8a3eee264f5762b!2zKOyjvCnqsbTsmYXtgazrpqzrhIg!5e0!3m2!1sko!2skr!4v1777530040434!5m2!1sko!2skr"
+width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+
+</section>
+
+<a href="https://open.kakao.com/o/여기에링크" class="kakao">카톡상담</a>
+
+<script>
+function move(id){
+document.getElementById(id).scrollIntoView({behavior:"smooth"});
+}
+
+// 🔥 구글폼 연결
+function goForm(){
+window.open("https://forms.gle/VNVDR3RX12bM9L3T6", "_blank");
+}
+</script>
+
+</body>
+</html>
+```
